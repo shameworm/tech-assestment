@@ -1,24 +1,4 @@
-## Project Structure
 
-```
-recipe-app/
-├── backend/             # Express backend
-│   ├── src/
-│   └── .env             # Backend environment config
-├── frontend/            # React + Vite frontend
-│   ├── src/
-│   └── .env             # Frontend environment config
-└── README.md
-```
-
----
-
-## Requirements
-
-- **Node.js** v16 or later
-- **npm** or **yarn**
-
----
 
 ## Getting Started
 
