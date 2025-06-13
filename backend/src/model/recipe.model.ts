@@ -1,5 +1,9 @@
 import axios from "axios";
+import dotenv from "dotenv";
+
 import { HttpError } from "./http-error";
+
+dotenv.config();
 
 const API_BASE = process.env.API_BASE;
 
@@ -22,7 +26,6 @@ export const getRecipes = async (filter?: {
     } else {
       url = `${API_BASE}/search.php?s=`;
     }
-
     const response = await axios.get(url);
     return response.data.meals ?? [];
   } catch (error) {

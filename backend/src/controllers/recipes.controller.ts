@@ -23,7 +23,7 @@ export const getRecipes = async (
     const recipes = await getRecipesHelper(filter);
     res.status(200).json(recipes);
   } catch (error) {
-    return next(new HttpError("Failed to fetch recipes", 500));
+    return next(new HttpError("Failed to fetch recipes 111", 500));
   }
 };
 
