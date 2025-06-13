@@ -1,31 +1,9 @@
-## Project Structure
-
-```
-recipe-app/
-├── backend/             # Express backend
-│   ├── src/
-│   └── .env             # Backend environment config
-├── frontend/            # React + Vite frontend
-│   ├── src/
-│   └── .env             # Frontend environment config
-└── README.md
-```
-
----
-
-## Requirements
-
-- **Node.js** v16 or later
-- **npm** or **yarn**
-
----
-
 ## Getting Started
 
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/recipe-app.git
+git clone https://github.com/shameworm/tech-assestment.git
 cd recipe-app
 ```
 
@@ -39,7 +17,7 @@ npm install
 Create a `.env` file in `backend/`:
 
 ```env
-PORT=4000
+PORT=3000
 API_BASE_URL=https://www.themealdb.com/api/json/v1/1
 ```
 
@@ -49,7 +27,7 @@ Start backend server:
 npm run dev
 ```
 
-The backend will be available at `http://localhost:4000`
+The backend will be available at `http://localhost:3000`
 
 ### 3. Setup Frontend
 
@@ -61,7 +39,7 @@ npm install
 Create a `.env` file in `frontend/`:
 
 ```env
-VITE_API_BASE_URL=http://localhost:4000/api
+VITE_API_BASE_URL=http://localhost:3000/api
 ```
 
 Start frontend server:
@@ -78,10 +56,10 @@ The frontend will be available at `http://localhost:5173`
 
 ### Backend (`backend/.env`)
 
-| Variable       | Description                              |
-| -------------- | ---------------------------------------- |
-| `PORT`         | Port to run the Express server on        |
-| `API_BASE_URL` | URL for the MealDB API (public endpoint) |
+| Variable       | Description                       |
+| -------------- | --------------------------------- |
+| `PORT`         | Port to run the Express server on |
+| `API_BASE_URL` | URL for the API (public endpoint) |
 
 ### Frontend (`frontend/.env`)
 
