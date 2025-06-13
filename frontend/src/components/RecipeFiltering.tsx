@@ -1,4 +1,4 @@
-import { useRecipeFilters } from "../hooks/useRecipeFilters";
+import { useRecipeFilters } from '../hooks/useRecipeFilters';
 
 export function RecipeFilter() {
   const { ingredient, area, category, handleInput, applyFilter } =
@@ -11,21 +11,21 @@ export function RecipeFilter() {
           type="text"
           placeholder="Ingredient (e.g. chicken_breast)"
           value={ingredient}
-          onChange={(e) => handleInput("ingredient", e.target.value)}
+          onChange={(e) => handleInput('ingredient', e.target.value)}
           className="border p-2 rounded"
         />
         <input
           type="text"
           placeholder="Area (e.g. Canadian)"
           value={area}
-          onChange={(e) => handleInput("area", e.target.value)}
+          onChange={(e) => handleInput('area', e.target.value)}
           className="border p-2 rounded"
         />
         <input
           type="text"
           placeholder="Category (e.g. Seafood)"
           value={category}
-          onChange={(e) => handleInput("category", e.target.value)}
+          onChange={(e) => handleInput('category', e.target.value)}
           className="border p-2 rounded"
         />
       </div>

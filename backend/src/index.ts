@@ -1,9 +1,9 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
-import { router as recipeRouter } from "./routes/recipes.routes";
-import { errorHandler, notFound } from "./middleware/error-handler";
+import { router as recipeRouter } from './routes/recipes.routes';
+import { errorHandler, notFound } from './middleware/error-handler';
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api", recipeRouter);
+app.use('/api', recipeRouter);
 
 app.use(notFound);
 app.use(errorHandler);

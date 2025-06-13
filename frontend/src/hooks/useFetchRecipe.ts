@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { fetchRecipes } from "../api/recipe-api";
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { fetchRecipes } from '../api/recipe-api';
 
 type Recipe = {
   idMeal: string;
@@ -14,9 +14,9 @@ export function useFetchRecipe() {
   const [error, setError] = useState(false);
   const [searchParams] = useSearchParams();
 
-  const ingredient = searchParams.get("ingredient") ?? undefined;
-  const area = searchParams.get("area") ?? undefined;
-  const category = searchParams.get("category") ?? undefined;
+  const ingredient = searchParams.get('ingredient') ?? undefined;
+  const area = searchParams.get('area') ?? undefined;
+  const category = searchParams.get('category') ?? undefined;
 
   useEffect(() => {
     const loadRecipes = async () => {

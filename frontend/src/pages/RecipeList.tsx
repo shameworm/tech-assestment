@@ -1,7 +1,7 @@
-import { RecipeCard } from "../components/RecipeCard";
-import { RecipeFilter } from "../components/RecipeFiltering";
-import { useFetchRecipe } from "../hooks/useFetchRecipe";
-import { getRecipeTitle } from "../utils/getTitle";
+import { RecipeCard } from '../components/RecipeCard';
+import { RecipeFilter } from '../components/RecipeFiltering';
+import { useFetchRecipe } from '../hooks/useFetchRecipe';
+import { getRecipeTitle } from '../utils/getTitle';
 
 export function RecipeList() {
   const { recipes, loading, error, ingredient, area, category } =

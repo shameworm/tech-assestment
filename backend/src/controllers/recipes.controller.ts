@@ -1,10 +1,10 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from 'express';
 
-import { HttpError } from "../model/http-error";
+import { HttpError } from '../model/http-error';
 import {
   getRecipes as getRecipesHelper,
   getRecipeInfoById as getRecipeInfoByIdHelper,
-} from "../model/recipe.model";
+} from '../model/recipe.model';
 
 export const getRecipes = async (
   req: Request,
@@ -23,7 +23,7 @@ export const getRecipes = async (
     const recipes = await getRecipesHelper(filter);
     res.status(200).json(recipes);
   } catch (error) {
-    return next(new HttpError("Failed to fetch recipes 111", 500));
+    return next(new HttpError('Failed to fetch recipes 111', 500));
   }
 };
 
@@ -38,11 +38,11 @@ export const getRecipeInfoById = async (
     const recipe = await getRecipeInfoByIdHelper(id);
 
     if (!recipe) {
-      return next(new HttpError("Recipe not found", 404));
+      return next(new HttpError('Recipe not found', 404));
     }
 
     res.status(200).json(recipe);
   } catch (error) {
-    return next(new HttpError("Failed to fetch recipe", 500));
+    return next(new HttpError('Failed to fetch recipe', 500));
   }
 };

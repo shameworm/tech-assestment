@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { useFetchRecipeInfo } from "../hooks/useFetchRecipeInfo";
-import { CategorySidebar } from "../components/CategorySideBar";
+import { useNavigate } from 'react-router-dom';
+import { useFetchRecipeInfo } from '../hooks/useFetchRecipeInfo';
+import { CategorySidebar } from '../components/CategorySideBar';
 export function RecipeInfoPage() {
   const { recipe, loading, error } = useFetchRecipeInfo();
   const navigate = useNavigate();
@@ -11,11 +11,11 @@ export function RecipeInfoPage() {
 
   const ingredients = Object.entries(recipe)
     .filter(
-      ([key, value]) => key.startsWith("strIngredient") && value && value.trim()
+      ([key, value]) => key.startsWith('strIngredient') && value && value.trim()
     )
     .map(([key, value]) => {
-      const index = key.replace("strIngredient", "");
-      const measure = recipe[`strMeasure${index}`] || "";
+      const index = key.replace('strIngredient', '');
+      const measure = recipe[`strMeasure${index}`] || '';
       return {
         ingredient: value as string,
         measure: measure as string,
@@ -61,7 +61,7 @@ export function RecipeInfoPage() {
                   className="text-blue-600 underline hover:text-blue-800"
                 >
                   {ingredient}
-                </button>{" "}
+                </button>{' '}
                 - {measure}
               </li>
             ))}

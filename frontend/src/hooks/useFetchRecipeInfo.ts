@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchRecipeById } from "../api/recipe-api";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchRecipeById } from '../api/recipe-api';
 
 type RecipeInfoProps = {
   idMeal: string;

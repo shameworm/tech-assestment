@@ -10,5 +10,5 @@ export function getRecipeTitle({
   if (ingredient) return `Recipes with "${ingredient}"`;
   if (area) return `Recipes from "${area}"`;
   if (category) return `Recipes in "${category}" category`;
-  return "All Recipes";
+  return 'All Recipes';
 }

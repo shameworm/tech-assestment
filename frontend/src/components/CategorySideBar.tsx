@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { useCategoryRecipes } from "../hooks/useCategoryRecipes";
+import { useNavigate } from 'react-router-dom';
+import { useCategoryRecipes } from '../hooks/useCategoryRecipes';
 
 type CategorySidebarProps = {
   category?: string;

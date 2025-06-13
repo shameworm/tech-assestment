@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -9,7 +9,7 @@ export async function fetchRecipes(params?: {
   area?: string;
   category?: string;
 }) {
-  const response = await api.get("/recipes", { params });
+  const response = await api.get('/recipes', { params });
   return response.data;
 }
 

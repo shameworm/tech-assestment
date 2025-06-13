@@ -1,7 +1,7 @@
-import axios from "axios";
-import dotenv from "dotenv";
+import axios from 'axios';
+import dotenv from 'dotenv';
 
-import { HttpError } from "./http-error";
+import { HttpError } from './http-error';
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ export const getRecipes = async (filter?: {
   const { ingredient, area, category } = filter || {};
 
   try {
-    let url = "";
+    let url = '';
 
     if (ingredient) {
       url = `${API_BASE}/filter.php?i=${encodeURIComponent(ingredient)}`;
@@ -29,7 +29,7 @@ export const getRecipes = async (filter?: {
     const response = await axios.get(url);
     return response.data.meals ?? [];
   } catch (error) {
-    throw new HttpError("Failed to fetch recipes.", 500);
+    throw new HttpError('Failed to fetch recipes.', 500);
   }
 };
 
@@ -40,6 +40,6 @@ export const getRecipeInfoById = async (id: string) => {
     const response = await axios.get(url);
     return response.data.meals[0] || null;
   } catch (error) {
-    throw new HttpError("Failed to fetch recipe.", 500);
+    throw new HttpError('Failed to fetch recipe.', 500);
   }
 };

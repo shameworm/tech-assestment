@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { fetchRecipesByCategory } from "../api/recipe-api";
+import { useEffect, useState } from 'react';
+import { fetchRecipesByCategory } from '../api/recipe-api';
 
 type Recipe = {
   idMeal: string;
